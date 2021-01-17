@@ -1,0 +1,6 @@
+[user]
+    name = TatsuyaYamamoto
+    email = t28.is.tatsuya@gamil.com
+
+[includeIf "gitdir:~/workspace/projects/line/"]
+    path = ~/workspace/projects/line/gitconfig
