@@ -4,3 +4,6 @@
 
 [includeIf "gitdir:~/workspace/projects/line/"]
     path = ~/workspace/projects/line/gitconfig
+
+[init]
+	defaultBranch = main
