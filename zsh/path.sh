@@ -14,11 +14,9 @@ export PATH=${JAVA_HOME}/bin:${PATH}
 # Android SDK
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/JP27479/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/JP27479/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/JP27479/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/JP27479/google-cloud-sdk/completion.zsh.inc'; fi
+# google cloud sdk
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # nvm
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
