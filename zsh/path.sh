@@ -5,9 +5,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Java
-#JAVA_VERSION="14"
-#JAVA_VERSION="11"
-JAVA_VERSION="1.8"
+JAVA_VERSION="17"
+# JAVA_VERSION="14"
+# JAVA_VERSION="11"
+# JAVA_VERSION="1.8"
 export JAVA_HOME=`/usr/libexec/java_home -v "${JAVA_VERSION}"`
 export PATH=${JAVA_HOME}/bin:${PATH}
 
