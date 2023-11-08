@@ -24,7 +24,7 @@ if [[ ! -e "$ZSHRC_FILE_PATH" ]]; then
     echo "no .zshrc file in $ACTUAL_DOTFILE_DIR_PATH"
 fi
 
-source "$DOTFILE_DIR_PATH/zsh/aliase.sh"
-source "$DOTFILE_DIR_PATH/zsh/npm_completion.sh"
-source "$DOTFILE_DIR_PATH/zsh/path.sh"
-source "$DOTFILE_DIR_PATH/zsh/prompt.sh"
+source "$DOTFILE_DIR_PATH/.config/zsh/aliase.sh"
+source "$DOTFILE_DIR_PATH/.config/zsh/npm_completion.sh"
+source "$DOTFILE_DIR_PATH/.config/zsh/path.sh"
+source "$DOTFILE_DIR_PATH/.config/zsh/prompt.sh"
