@@ -17,3 +17,7 @@ $ brew bundle --file $HOME/dotfiles/Brewfile
 
 - `~/.ssh`
 - iTerm theme
+- Some apps
+  - cask "google-chrome"
+  - cask "slack"
+
