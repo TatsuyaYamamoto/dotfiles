@@ -11,7 +11,7 @@ autoload -U compinit && compinit -u
 setopt nonomatch
 
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source "${ZDOTDIR}/aliase.sh"
 source "${ZDOTDIR}/npm_completion.sh"
