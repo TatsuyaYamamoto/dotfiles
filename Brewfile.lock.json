@@ -1826,20 +1826,6 @@
           }
         }
       },
-      "nvm": {
-        "version": "0.39.5",
-        "bottle": {
-          "rebuild": 0,
-          "root_url": "https://ghcr.io/v2/homebrew/core",
-          "files": {
-            "all": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/nvm/blobs/sha256:2290c2b0f95c6ba0c10d18b286bb8e4022126177d356eb395f0db76202df4642",
-              "sha256": "2290c2b0f95c6ba0c10d18b286bb8e4022126177d356eb395f0db76202df4642"
-            }
-          }
-        }
-      },
       "openjdk@17": {
         "version": "17.0.9",
         "bottle": {
