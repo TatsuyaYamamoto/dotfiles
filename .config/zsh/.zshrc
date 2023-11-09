@@ -1,6 +1,3 @@
-# 文字コードの指定
-export LANG=ja_JP.UTF-8
-
 # 補完 (「⁠大文字小文字を同一視」をONにしたときも，検索文字列としてわざわざ大文字をあらかじめ入れた場合は大文字にだけマッチして欲しい)
 # https://gihyo.jp/dev/serial/01/zsh-book/0005
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
@@ -16,15 +13,7 @@ setopt nonomatch
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-DOTFILE_DIR_PATH="$HOME/dotfiles"
-ZSHRC_FILE_PATH="$DOTFILE_DIR_PATH/.zshrc"
-
-if [[ ! -e "$ZSHRC_FILE_PATH" ]]; then
-    echo "no .zshrc file in $ACTUAL_DOTFILE_DIR_PATH"
-fi
-
-source "$DOTFILE_DIR_PATH/.config/zsh/aliase.sh"
-source "$DOTFILE_DIR_PATH/.config/zsh/npm_completion.sh"
-source "$DOTFILE_DIR_PATH/.config/zsh/path.sh"
-source "$DOTFILE_DIR_PATH/.config/zsh/prompt.sh"
+source "${ZDOTDIR}/aliase.sh"
+source "${ZDOTDIR}/npm_completion.sh"
+source "${ZDOTDIR}/path.sh"
+source "${ZDOTDIR}/prompt.sh"

@@ -1,3 +1,7 @@
+# XDG
+# https://wiki.archlinux.jp/index.php/XDG_Base_Directory
+# https://github.com/git/git/commit/0d94427
+
 [user]
     name = TatsuyaYamamoto
     email = t28.is.tatsuya@gmail.com
