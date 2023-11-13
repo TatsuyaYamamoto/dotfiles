@@ -11,6 +11,9 @@ JAVA_VERSION="17"
 export JAVA_HOME=`/usr/libexec/java_home -v "${JAVA_VERSION}"`
 export PATH=${JAVA_HOME}/bin:${PATH}
 
+# IDEA
+export PATH=$PATH:"/Applications/IntelliJ IDEA.app/Contents/MacOS"
+
 # Android SDK
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 

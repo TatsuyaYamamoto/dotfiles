@@ -19,6 +19,7 @@ $ brew bundle --file $HOME/dotfiles/Brewfile
 - iTerm theme
 - [nvm](https://github.com/nvm-sh/nvm#install--update-script)
 - Some apps
-  - cask "google-chrome"
-  - cask "slack"
+  - google-chrome
+  - slack
+  - intellij-idea
 
