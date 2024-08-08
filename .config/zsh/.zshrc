@@ -14,6 +14,9 @@ setopt nonomatch
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source "${ZDOTDIR}/aliase.sh"
-source "${ZDOTDIR}/npm_completion.sh"
 source "${ZDOTDIR}/path.sh"
 source "${ZDOTDIR}/prompt.sh"
+
+# completions
+source "${ZDOTDIR}/npm_completion.sh"
+source "${ZDOTDIR}/site-functions/pnpm.zsh"
