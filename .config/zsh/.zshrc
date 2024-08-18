@@ -18,5 +18,5 @@ source "${ZDOTDIR}/path.sh"
 source "${ZDOTDIR}/prompt.sh"
 
 # completions
-source "${ZDOTDIR}/npm_completion.sh"
+source "${ZDOTDIR}/site-functions/npm.zsh"
 source "${ZDOTDIR}/site-functions/pnpm.zsh"
