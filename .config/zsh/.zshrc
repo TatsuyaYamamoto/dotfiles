@@ -18,5 +18,6 @@ source "${ZDOTDIR}/path.sh"
 source "${ZDOTDIR}/prompt.sh"
 
 # completions
+source "${ZDOTDIR}/site-functions/docker.zsh"
 source "${ZDOTDIR}/site-functions/npm.zsh"
 source "${ZDOTDIR}/site-functions/pnpm.zsh"

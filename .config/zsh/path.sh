@@ -25,3 +25,7 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# rancher desktop
+# https://docs.rancherdesktop.io/ui/preferences/application/environment/
+export PATH=$PATH:$HOME/.rd/bin
