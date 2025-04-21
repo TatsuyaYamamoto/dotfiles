@@ -17,4 +17,3 @@ mkdir -p  "${XDG_STATE_HOME}"
 # Setup symlinks
 ln -sfnv "$DOTFILE_DIR/.config/"* "$XDG_CONFIG_HOME"
 ln -sfnv "$XDG_CONFIG_HOME/zsh/.zshenv" "$HOME/.zshenv"
-ln -sfnv "$DOTFILE_DIR/.vimrc" "$HOME/.vimrc"
