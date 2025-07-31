@@ -11,3 +11,17 @@
 
 [init]
 	defaultBranch = main
+
+[alias]
+    # https://t28.dev/blog/switch-to-pr-with-git-alias
+    pr-switch = "!c(){\
+      readonly PR_NUMBER=$1; \
+      git switch --detach; \
+      git fetch origin pull/$PR_NUMBER/head:#$PR_NUMBER; \
+      git switch \"#$PR_NUMBER\"; \
+    };c"
+
+    # https://t28.dev/blog/switch-to-pr-with-git-alias
+    pr-prune = "!c(){\
+      git branch --list '#*' | grep -v '*' | xargs --no-run-if-empty git branch -D; \
+    };c"
