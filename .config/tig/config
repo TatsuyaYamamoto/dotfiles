@@ -1,0 +1,10 @@
+# default config: https://github.com/jonas/tig/blob/master/tigrc
+#
+# ref: https://qiita.com/sfus/items/063797a1dd8fdc7d032f
+# ref: https://qiita.com/akinoriikeda/items/62467a0906d95a3a3e04
+
+# color cursor			white	green	bold
+color cursor            234     6       bold
+
+# set main-view	= line-number:no,interval=5 id:no date:default,format="%Y-%m-%d" author:full commit-title:yes,graph,refs,overflow=no
+set main-view   =                           id    date:default,format="%Y-%m-%d" author:full commit-title:yes,graph=yes,refs=yes,overflow=no
