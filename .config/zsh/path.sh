@@ -8,12 +8,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Java
-JAVA_VERSION="17"
-# JAVA_VERSION="14"
-# JAVA_VERSION="11"
-# JAVA_VERSION="1.8"
+JAVA_VERSION=21
+#JAVA_VERSION=14
+#JAVA_VERSION=11
+#JAVA_VERSION=1.8
 export JAVA_HOME=`/usr/libexec/java_home -v "${JAVA_VERSION}"`
-export PATH=${JAVA_HOME}/bin:${PATH}
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # IDEA
 export PATH=$PATH:"/Applications/IntelliJ IDEA.app/Contents/MacOS"
