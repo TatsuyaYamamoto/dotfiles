@@ -1,3 +1,7 @@
+# curl
+# https://everything.curl.dev/install/macos.html
+export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
+
 # nvm
 # https://github.com/nvm-sh/nvm#install--update-script
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
