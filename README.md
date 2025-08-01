@@ -1,6 +1,5 @@
 # dotfiles
 
-
 ## Installation
 
 ```
@@ -19,7 +18,22 @@ $ brew bundle --file $HOME/dotfiles/Brewfile
 - iTerm theme
 - [nvm](https://github.com/nvm-sh/nvm#install--update-script)
 - Some apps
-  - google-chrome
-  - slack
-  - intellij-idea
+    - google-chrome
+    - slack
+    - intellij-idea
 
+## Maintenance
+
+### Homebrew
+
+```shell
+# List the formulae installed on request 
+$ brew list --installed-on-request
+act
+awscli
+bun
+...
+
+# Write ${XDG_CONFIG_HOME}/homebrew/Brewfile
+$ brew bundle dump --global --force
+```
