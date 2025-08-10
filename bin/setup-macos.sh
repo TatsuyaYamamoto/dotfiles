@@ -115,7 +115,7 @@ Finder() {
 
 AppStore() {
   # ========== Auto Update Check ==========
-  # Mac でアップデートがバックグラウンドでダウンロードされないようにする方法 
+  # Mac でアップデートがバックグラウンドでダウンロードされないようにする方法
   # https://support.apple.com/ja-jp/HT207251
   # - Disable
   defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool false
@@ -152,15 +152,15 @@ EnergySaver() {
 
 DateTime() {
   # ========== Set date and time automatically ==========
-  sudo systemsetup -setusingnetworktime on > /dev/null
+#  sudo systemsetup -setusingnetworktime on > /dev/null
 
   # ========== Time options ==========
   # - Digital
-  defaults write com.apple.menuextra.clock IsAnalog -bool false
+#  defaults write com.apple.menuextra.clock IsAnalog -bool false
 
   # ========== Flash the time separators ==========
   # https://macos-defaults.com/menubar/flashdateseparators.html#set-to-false-default-value
-  defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
+#  defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 
   # ========== DateFormat ==========
   # 日付と時刻
@@ -262,10 +262,110 @@ Trackpad() {
   defaults write com.apple.dock showDesktopGestureEnabled -bool true
 }
 
-ExtraSettings() {
-  # ========== Disable DS_STORE in Network and USB ==========
-  defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+Mouth() {
+  # 軌跡の速さ
+
+  # ナチュラルなスクロール
+  # 副ボタンのクリック
+
+  # ダブルクリックの間隔
+
+  # スクロールの速さ
+  defaults write -g com.apple.mouse.scaling 8
+
+  # ========== Look up & data detectors ==========
+  # 対象の設定項目が見つからん...
+
+  # ========== Secondary click ==========
+  # - Checked
+  #  - Click or tap with two fingers
+  # https://baqamore.hatenablog.com/entry/2015/02/09/221934
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 0
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadRightClick -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+
+  # ========== Tap to click ==========
+  # - Checked
+  defaults write com.apple.AppleMultitouchTrackpad                  Clicking -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+  # ========== Click ==========
+  # @int:Light.0 Medium.1 Firm.2
+  defaults write -g com.apple.trackpad.forceClick 1
+
+  # ========== Tracking speed ==========
+  # @int:Slow.0 Fast.3
+  defaults write -g com.apple.trackpad.scaling 1.5
+
+  # ========== Force Click and haptic feedback ==========
+  # - Checked
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad ActuateDetents -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad ForceSuppressed -bool false
+
+  # ========== Scroll direction: Natural ==========
+  defaults write .GlobalPreferences com.apple.swipescrolldirection -bool true
+
+  # ========== Zoom in or out ==========
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadPinch -boolean true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadPinch -boolean true
+
+  # ========== Smart zoom ==========
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadTwoFingerDoubleTapGesture -boolean true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -boolean true
+
+  # ========== Rotate ==========
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadRotate -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool true
+
+  # ========== Swipe between pages ==========
+  # - Checked
+  # - Scroll left or right with two fingers
+  # https://baqamore.hatenablog.com/entry/2015/02/09/221934
+  defaults write -g AppleEnableSwipeNavigateWithScrolls -bool true
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadThreeFingerHorizSwipeGesture -int 0
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadThreeFingerVertSwipeGesture  -int 0
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture  -int 0
+
+
+  # ========== Swipe between full-screen apps ==========
+  # - Checked
+  #  - Scroll left or right with three fingers
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadThreeFingerHorizSwipeGesture -int 2
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+
+  # ========== Notification Center ==========
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
+
+  # ========== Mission Control ==========
+  # - Checked
+  # - Swipe up with three fingers
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadThreeFingerVertSwipeGesture -int 2
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
+
+  # ========== App Expose ==========
+  # - Checked
+  # - Swipe down with three fingers
+  defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+  defaults write com.apple.AppleMultitouchTrackpad                  TrackpadThreeFingerVertSwipeGesture -int 2
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
+
+  # ========== Launchpad ==========
+  defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
+
+  # ========== Show Desktop ==========
+  defaults write com.apple.dock showDesktopGestureEnabled -bool true
+}
+
+Others() {
+  # Prevent to read/write .DS_Store files on "network drives"
+  # https://support.apple.com/ja-jp/102064
   defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+  # Prevent to read/write .DS_Store files on "network drives"
+  # https://discussions.apple.com/thread/251428275
+  defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 }
 
 Dock
@@ -276,7 +376,8 @@ EnergySaver
 DateTime
 iCloud
 Trackpad
-ExtraSettings
+Mouth
+Others
 
 # cache clean and restart services
 killall cfprefsd
