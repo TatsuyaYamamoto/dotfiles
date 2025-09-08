@@ -9,7 +9,7 @@ $ $HOME/dotfiles/bin/install.sh
 $ $HOME/dotfiles/bin/setup-macos.sh
 
 # After installing Homebrew and open new tab...
-$ brew bundle --file $HOME/dotfiles/Brewfile
+$ brew bundle --file $HOME/dotfiles/.config/homebrew/Brewfile
 ```
 
 ## Items to be migrated manually
