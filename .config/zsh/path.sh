@@ -28,8 +28,8 @@ export PATH=$PATH:"/Applications/IntelliJ IDEA.app/Contents/MacOS"
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
 # google cloud sdk
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/completion.zsh.inc"
 
 # https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv
 export PYENV_ROOT="$HOME/.pyenv"
