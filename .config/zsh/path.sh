@@ -2,6 +2,10 @@
 # https://everything.curl.dev/install/macos.html
 export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 
+# fnm
+# https://github.com/Schniz/fnm?tab=readme-ov-file#zsh
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # nvm
 # https://github.com/nvm-sh/nvm#install--update-script
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#manual-install
