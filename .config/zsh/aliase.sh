@@ -5,3 +5,6 @@ alias ll='ls -laF'
 
 # tig
 alias tig-all='tig --all'
+alias tig-beta='tig origin/main origin/beta'
+alias tig-rc='  tig origin/main origin/rc'
+alias tig-real='tig origin/main origin/real'
