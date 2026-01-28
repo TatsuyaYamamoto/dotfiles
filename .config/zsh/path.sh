@@ -14,7 +14,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm
 
 # Java
-JAVA_VERSION=21
+# https://mise.jdx.dev/lang/java.html#macos-java-home-integration
+JAVA_VERSION=25
 #JAVA_VERSION=14
 #JAVA_VERSION=11
 #JAVA_VERSION=1.8
