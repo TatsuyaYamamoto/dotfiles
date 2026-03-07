@@ -1,3 +1,7 @@
+# claude
+# https://github.com/anthropics/claude-code/blob/53a5f3ee0703c2ab1b6d1dd18d8ab65187f9b8ad/CHANGELOG.md?plain=1#L1921
+export CLAUDE_CONFIG_DIR="${XDG_CONFIG_HOME}"/claude
+
 # curl
 # https://everything.curl.dev/install/macos.html
 export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
